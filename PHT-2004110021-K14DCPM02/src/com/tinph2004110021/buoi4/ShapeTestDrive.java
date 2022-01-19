@@ -5,7 +5,7 @@ public class ShapeTestDrive {
         Square sp = new Square();
         Circle cl = new Circle();
         Triangle tg = new Triangle();
-        Amoeba ab = new Amoeba("Music.hif");
+        Amoeba ab = new Amoeba("Music.hif", 3.4, 5.4);
         ab.rotate();
         ab.playSound();
         // sp.soundSquare();
