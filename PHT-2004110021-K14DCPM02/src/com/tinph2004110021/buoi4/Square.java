@@ -15,15 +15,15 @@ public class Square {
         this.fileSound = fileSound;
     }
     public Square(){
-        
+
     }
-    public void square(){
-        System.out.println("---------------");
-        System.out.println("|             |");
-        System.out.println("|             |");
-        System.out.println("|             |");
-        System.out.println("---------------");
-    }
+    // public void square(){
+    //     System.out.println("---------------");
+    //     System.out.println("|             |");
+    //     System.out.println("|             |");
+    //     System.out.println("|             |");
+    //     System.out.println("---------------");
+    // }
     public void soundSquare(){
         System.out.println("Teng Teng Teng");
     }
