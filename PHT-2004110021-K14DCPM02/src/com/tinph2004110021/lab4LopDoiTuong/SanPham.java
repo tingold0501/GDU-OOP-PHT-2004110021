@@ -1,11 +1,14 @@
 package com.tinph2004110021.lab4LopDoiTuong;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class SanPham {
    private String tenSp;
    private double giaSp, giamGiaSp;
    Scanner sc = new Scanner(System.in);
+   List<SanPham> lPhams = new ArrayList<>();
 public SanPham(){
 
 }
@@ -49,6 +52,21 @@ public void nhap(){
     this.giaSp = sc.nextDouble();
     System.out.println("Nhập Giảm Giá Sản Phẩm");
     this.giamGiaSp = sc.nextDouble();
-    
 } 
+public void nhapS()
+{
+    System.out.println("Nhập Số Lượng Sản Phẩm Muốn Thêm:");
+    int n = sc.nextInt();
+    for(int i = 0; i < n; i++){
+        SanPham sp = new SanPham();
+        sp.nhap();
+        lPhams.add(sp);
+    }
+}
+public void xuatS(){
+    System.out.printf("%-20S %-20S %-20S %-20S\n", "tên sản phẩm", "đơn giá", "giảm giá", "thuế nhập nhẩu");
+    for (SanPham sanPham : lPhams) {
+        sanPham.xuat();
+    }
+}
 }

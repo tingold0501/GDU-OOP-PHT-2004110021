@@ -10,6 +10,8 @@ public class SanPhamTestDrive {
         sp2.xuat();
         sp.nhap();
         sp.xuat();
+        sp.nhapS();
+        sp.xuatS();
     }
     
 }
