@@ -1,15 +1,15 @@
 package com.tinph2004110021.buoi4;
 
 public class GuessGame {
-    Player p1, p2, p3;
+    private Player p1, p2, p3;
+    private int guessp1, guessp2, guessp3 = 0;
+    private boolean p1isRight = false;
+    private boolean p2isRight = false;
+    private boolean p3isRight = false;
     public void startGame(){
         p1 = new Player();
         p2 = new Player();
         p3 = new Player();
-        int guessp1, guessp2, guessp3 = 0;
-        boolean p1isRight = false;
-        boolean p2isRight = false;
-        boolean p3isRight = false;
         int targetNumber = (int) (Math.random()* 10);
         System.out.println("I'm thinking of a number between 0 and 9...");
         while(true){
@@ -17,7 +17,6 @@ public class GuessGame {
             p1.guess();
             p2.guess();
             p3.guess();
-
             guessp1 = p1.number;
             System.out.println("Player One Guess " + guessp1);
             guessp2 = p2.number;
