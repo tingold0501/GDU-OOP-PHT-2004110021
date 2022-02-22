@@ -17,13 +17,13 @@ public class Circle {
     public Circle(){
         
     }
-    public void circle(){
-        System.out.println("    ------");
-        System.out.println("  -         -");
-        System.out.println(" -           -");
-        System.out.println("  -         -");
-        System.out.println("    ------");
-    }
+    // public void circle(){
+    //     System.out.println("    ------");
+    //     System.out.println("  -         -");
+    //     System.out.println(" -           -");
+    //     System.out.println("  -         -");
+    //     System.out.println("    ------");
+    // }
     public void soundCircle(){
         System.out.println("Ting Ting Ting");
     }

@@ -17,12 +17,12 @@ public class Triangle {
     public Triangle(){
         
     }
-    public void triangle(){
-        System.out.println("     +     ");
-        System.out.println("   +   +   ");
-        System.out.println("  +     +  ");
-        System.out.println(" +++++++++ ");
-    }
+    // public void triangle(){
+    //     System.out.println("     +     ");
+    //     System.out.println("   +   +   ");
+    //     System.out.println("  +     +  ");
+    //     System.out.println(" +++++++++ ");
+    // }
     public void soundTriangle()
     {
         System.out.println("Tang Tang Tang");

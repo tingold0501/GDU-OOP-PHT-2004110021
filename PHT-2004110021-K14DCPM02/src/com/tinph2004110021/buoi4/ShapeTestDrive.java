@@ -8,11 +8,6 @@ public class ShapeTestDrive {
         Amoeba ab = new Amoeba("Music.hif", 3.4, 5.4);
         ab.rotate();
         ab.playSound();
-        // sp.soundSquare();
-        // sp.roateSquare();
-        // cl.soundCircle();
-        // cl.roateCircle();
-        // tg.xoay();
-        // tg.soundTriangle();
+        
     }
 }
