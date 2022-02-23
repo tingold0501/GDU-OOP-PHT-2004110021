@@ -1,8 +1,8 @@
 package com.tinph2004110021.buoi4;
 
 public class Amoeba {
-    String fileSound;
-    double xPoint, yPoint;
+    private String fileSound;
+    private double xPoint, yPoint;
 
     public String getFileSound() {
         return fileSound;
