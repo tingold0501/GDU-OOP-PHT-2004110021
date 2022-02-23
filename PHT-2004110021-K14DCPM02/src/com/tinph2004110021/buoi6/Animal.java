@@ -7,12 +7,12 @@ public class Animal {
 
     }
     protected void eat(){
-
+        System.out.println("Eating...");
     }
     protected void sleep(){
-
+        System.out.println("Spleeping...");
     }
     protected void roam(){
-        
+        System.out.println("Roaming...");
     }
 }
