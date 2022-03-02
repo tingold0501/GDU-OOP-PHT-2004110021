@@ -45,4 +45,6 @@ public class Amoeba {
     public void rotate() {
         System.out.println("Đang Xoay 360 Độ... Tại xPoint: " + this.xPoint + " Tại yPoint: " + this.yPoint);
     }
+
+  
 }
