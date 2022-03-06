@@ -44,18 +44,17 @@ public class Vehicle {
 
     }
     // Các hàm xử lý theo đề
-    public float tinhTienThueXe(){
+    private float tinhTienThueXe(){
         float thueXe = 0;
-        if(this.dungTich == 100){
-            thueXe = this.triGia * (1/100);
+        if(dungTich < 100){
+            thueXe = triGia * (1/100);
         }
-        if(this.dungTich >= 100 && dungTich <= 200){
-            thueXe = this.triGia * (3/100);
+        if(dungTich >= 100 && dungTich <= 200){
+            thueXe = triGia * (3/100);
         }
-        if(this.dungTich > 200){
-            thueXe = this.triGia * (5/100);
+        if(dungTich > 200){
+            thueXe = triGia * (5/100);
         }
-     
         return thueXe;
     }
     public void nhapThongTinXe(){
@@ -67,12 +66,8 @@ public class Vehicle {
         this.dungTich = sc.nextInt();
         System.out.println("Nhập Giá Trị Xe: ");
         this.triGia = sc.nextFloat();
-        this.setDungTich(dungTich);
-        this.setLoaiXe(loaiXe);
-        this.setTenChuXe(tenChuXe);
-        this.setTriGia(triGia);
     }
-    public void xuatDuLieuXe(){
+    private void xuatDuLieuXe(){
         System.out.printf("%-20S %-20S %-20d %-20.2f %-20.2f\n", this.getTenChuXe(), this.getLoaiXe(), this.getDungTich(),this.getTriGia(), this.tinhTienThueXe());
     }
     public void xuatThongTin(){
