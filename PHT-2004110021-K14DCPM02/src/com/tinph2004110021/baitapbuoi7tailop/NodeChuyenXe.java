@@ -3,6 +3,7 @@ package com.tinph2004110021.baitapbuoi7tailop;
 public class NodeChuyenXe {
     private XeNgoaiThanh xeNgoaiThanh;
     private XeNoiThanh xeNoiThanh;
+    private CompanyTravelV companyTravelV;
     private NodeChuyenXe next;
     public NodeChuyenXe(XeNgoaiThanh xeNgoaiThanh, XeNoiThanh xeNoiThanh, NodeChuyenXe next) {
         this.xeNgoaiThanh = xeNgoaiThanh;
@@ -41,5 +42,8 @@ public class NodeChuyenXe {
     public NodeChuyenXe(XeNgoaiThanh xeNgoaiThanh, XeNoiThanh xeNoiThanh) {
         this.xeNgoaiThanh = xeNgoaiThanh;
         this.xeNoiThanh = xeNoiThanh;
+    }
+    public NodeChuyenXe(CompanyTravelV companyTravelV){
+        this.companyTravelV = companyTravelV;
     }
 }

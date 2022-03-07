@@ -29,4 +29,13 @@ public class LinkedListChuyenXe {
         this.tail.setNext(newNodeChuyenXe);
         this.tail = newNodeChuyenXe;
     }
+    public void themChuyenXe(CompanyTravelV companyTravelV){
+        if(isEmpty()){
+            this.head = this.tail = new NodeChuyenXe(companyTravelV);
+            return;
+        }
+        NodeChuyenXe newNoXe = new NodeChuyenXe(companyTravelV);
+        this.tail.setNext(newNoXe);
+        this.tail = newNoXe;
+    }
 }

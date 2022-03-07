@@ -28,17 +28,6 @@ public class XeNgoaiThanh extends CompanyTravelV {
     public XeNgoaiThanh(){
         
     }
-    @Override
-    public void nhapChuyenXe() {
-        System.out.println("Nhập Nơi Đến:");
-        this.noiDen = sc.nextLine();
-        System.out.println("Nhập Số Ngày Đi Được:");
-        this.soNgayDiDuoc = sc.nextInt();
-    }
-    @Override
-    public void xuatDanhSachXe() {
-        companyTravelV.xuatDanhSachXe();
-        System.out.printf("%-20S %-20S\n", "nơi đến", "số ngày đi được");
-        System.out.printf("%-20f %-20d", this.getNoiDen(), this.getSoNgayDiDuoc());
-    }
+   
+   
 }

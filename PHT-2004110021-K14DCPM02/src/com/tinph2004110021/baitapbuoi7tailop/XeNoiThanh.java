@@ -34,20 +34,20 @@ public class XeNoiThanh extends CompanyTravelV {
     public XeNoiThanh() {
 
     }
-
+    
     @Override
-    public void nhapChuyenXe() {
-        companyTravelV.nhapChuyenXe();
-        System.out.println("Nhập Số Tuyến:");
+    protected void nhapChuyenXe() {
+        System.out.println("Nhập Số Tuyến Xe Nội Thành:");
         this.soTuyen = sc.nextInt();
-        System.out.println("Nhập Số Km Đi Được:");
+        System.out.println("Nhập Số Km Đi Được Xe Nội Thành:");
         this.kmDiDuoc = sc.nextDouble();
+        super.nhapChuyenXe();
+    }
+    @Override
+    public String toString() {
+        String xeNoiThanh = "Số Tuyến" + this.soTuyen + "Số Km Đi Được Xe Nội Thành" + this.kmDiDuoc;
+        return super.toString() + xeNoiThanh;
     }
 
-    @Override
-    public void xuatDanhSachXe() {
-        companyTravelV.xuatDanhSachXe();
-        System.out.printf("%-20S %-20S\n", "số tuyến", "số km đi được");
-        System.out.printf("%-20f %-20d", this.getKmDiDuoc(), this.getSoTuyen());
-    }
+    
 }

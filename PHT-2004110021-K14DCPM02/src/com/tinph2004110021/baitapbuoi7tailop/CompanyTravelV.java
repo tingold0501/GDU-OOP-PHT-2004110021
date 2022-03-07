@@ -3,10 +3,12 @@ package com.tinph2004110021.baitapbuoi7tailop;
 import java.util.Scanner;
 
 public class CompanyTravelV {
-    private int idChuyenXe, soXe, autoId;
+    private int idChuyenXe, soXe;
+    private static int autoId;
     private String hoTenTaiXe;
     private double doanhThu;
     Scanner sc = new Scanner(System.in);
+    // LinkedListChuyenXe linkedListChuyenXe = new LinkedListChuyenXe();
     public CompanyTravelV(){
         
     }
@@ -40,21 +42,31 @@ public class CompanyTravelV {
         this.hoTenTaiXe = hoTenTaiXe;
         this.doanhThu = doanhThu;
     }
-    public void nhapChuyenXe(){
-        System.out.println("Nhập Mã Chuyến Xe: ");
+    protected void nhapChuyenXe(){
+        System.out.println("Nhập ID Xe:");
         this.idChuyenXe = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Nhập Họ Tên Tài Xế: ");
-        this.hoTenTaiXe = sc.nextLine();
-        System.out.println("Nhập Số Xe: ");
+        System.out.println("Nhập Số Xe:");
         this.soXe = sc.nextInt();
-        System.out.println("Nhập Doanh Thu: ");
+        sc.nextLine();
+        System.out.println("Nhập Họ Tên Tài Xế:");
+        this.hoTenTaiXe = sc.nextLine();
+        System.out.println("Nhập Doanh Thu:");
         this.doanhThu = sc.nextDouble();
+        // CompanyTravelV companyTravelV = new CompanyTravelV(idChuyenXe, soXe, hoTenTaiXe, doanhThu);
+        // linkedListChuyenXe.themChuyenXe(companyTravelV);
     }
-    public void xuatDanhSachXe(){
-       System.out.println("=====================DANH SACH THONG TIN XE==============");
-       System.out.printf("%-20S %-20S %-20S %-20S\n", "mã chuyến xe", "họ tên tài xế", "số xe", "doanh thu");
-       System.out.printf("%-20d %-20S %-20d %-20f\n", this.getIdChuyenXe(), this.getHoTenTaiXe(), this.getSoXe(), this.getDoanhThu());
+    public void menuNhapChuyenXe()
+    {
+        System.out.println("Bạn Muốn Nhập Chuyến Xe Nào [1: Nội Thành] [2: Ngoại Thành]");
+        int lc = sc.nextInt();
+        switch(lc){
+            case 1:
+            break;
+            case 2:
+            break;
+            default: System.out.println("Lựa Chọn Không Hợp Lệ");
+            break;
+        }
     }
     public void menuTinhDoanhThu(){
         System.out.println("Bạn Chọn Tính Tổng Doanh Thu Của Xe Nào:");
@@ -72,7 +84,7 @@ public class CompanyTravelV {
         }
     }
     public void menuChonLoaiChuyenXe(){
-        System.out.println("Bạn Chọn Nhập Của Xe Nào:");
+        System.out.println("Bạn Chọn Tính Tổng Doanh Thu Của Xe Nào:");
         System.out.println("Ngoại Thành [1] OR Nội Thành [2]");
         int lc = sc.nextInt();
         switch(lc){
@@ -85,6 +97,12 @@ public class CompanyTravelV {
             default : System.out.println("Bạn Chọn Không Hợp Lệ!!!");
             break;
         }
+    }
+   
+    @Override
+    public String toString() {
+        return "CompanyTravelV Doanh Thu =" + doanhThu + ", Họ Và Tên Tài Xế =" + hoTenTaiXe + ", Mã Chuyến Xe =" + idChuyenXe
+                + ", Số Xe =" + soXe + "";
     }
     private double tongDoanhThuXeNoiThanh(){
         double tongDoanhThu =+ this.doanhThu;
