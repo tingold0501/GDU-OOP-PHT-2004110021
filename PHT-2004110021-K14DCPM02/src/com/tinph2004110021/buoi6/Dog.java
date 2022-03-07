@@ -1,6 +1,6 @@
 package com.tinph2004110021.buoi6;
 
-public class Dog extends Animal {
+public class Dog extends Chase {
     @Override
     protected void eat() {
         System.out.println("Dog Eating...");
@@ -9,7 +9,12 @@ public class Dog extends Animal {
     protected void makeNoise() {
         System.out.println("Dog Make Noise...");
     }
-    public void chaseCatFly(){
-        System.out.println("Dog Chase Cat...");
+    @Override
+    protected void chase() {
+       System.out.println("Dog Chase Cat....");
+    }
+    @Override
+    protected void roam() {
+        System.out.println("Dog Roaming...");
     }
 }
