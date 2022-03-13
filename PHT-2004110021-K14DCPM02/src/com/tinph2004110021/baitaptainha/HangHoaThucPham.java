@@ -36,7 +36,20 @@ public class HangHoaThucPham {
         return ngayHh;
     }
     private void setNgayHh(Date ngayHh) {
-        this.ngayHh = ngayHh;
+        if(ngayHh.before(ngaySx)){
+            this.ngayHh = ngayHh;
+        }
+        else{
+            System.out.println("Đã Hết Hạn!!!");
+        }
+    }
+    public boolean kiemTraHSD(){
+        boolean isHSD = false;
+        Date ngayHienTai = new Date();
+        if(this.ngayHh.after(ngayHienTai)){
+            isHSD = true;
+        }
+        return isHSD;
     }
     public HangHoaThucPham(int idHang) {
         this.idHang = idHang;
