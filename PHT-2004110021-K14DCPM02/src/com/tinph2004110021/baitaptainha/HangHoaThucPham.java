@@ -46,10 +46,12 @@ public class HangHoaThucPham {
     public boolean kiemTraHSD(){
         boolean isHSD = false;
         Date ngayHienTai = new Date();
-        if(this.ngayHh.after(ngayHienTai)){
+        if(this.ngayHh.before(ngayHienTai)){
             isHSD = true;
         }
+        System.out.println("Boolean: " + isHSD);
         return isHSD;
+        
     }
     public HangHoaThucPham(int idHang) {
         this.idHang = idHang;

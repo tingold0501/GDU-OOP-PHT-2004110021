@@ -6,7 +6,7 @@ public class HangHoaThucPhamTestDrive {
     public static void main(String[] args) {
         try {
             String ngayHh = "20/03/2022";
-            String ngaySx = "10/03/2020";
+            String ngaySx = "20/03/2020";
             SimpleDateFormat sFormat = new SimpleDateFormat("dd/MM/yyyy");
             HangHoaThucPham hThucPham = new 
             HangHoaThucPham("Rau Muong", 1000, sFormat.parse(ngaySx), sFormat.parse(ngayHh));
