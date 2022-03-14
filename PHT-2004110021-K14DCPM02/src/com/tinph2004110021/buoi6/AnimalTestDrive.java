@@ -5,6 +5,7 @@ public class AnimalTestDrive {
         Cat cat = new Cat();
         Hippo hippo = new Hippo();
         Dog dog = new Dog();
+        Animal animal = new Hippo();
         dog.chase();
         hippo.eat();
         cat.eat();
