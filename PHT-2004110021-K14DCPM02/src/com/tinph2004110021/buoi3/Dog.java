@@ -46,5 +46,7 @@ public class Dog {
         System.out.println("Runing...");
         this.bard();
     }
+    public void eat() {
+    }
     
 }
