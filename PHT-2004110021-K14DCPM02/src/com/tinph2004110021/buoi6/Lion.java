@@ -6,7 +6,7 @@ public class Lion extends Canime {
         System.out.println("Lion Make Noise...");
     }
     @Override
-    protected void eat() {
+    public void eat() {
         System.out.println("Lion Eating...");
     }
     @Override

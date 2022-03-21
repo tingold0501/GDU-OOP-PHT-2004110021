@@ -2,7 +2,7 @@ package com.tinph2004110021.buoi6;
 
 public class Worlf extends Felline {
     @Override
-    protected void eat() {
+    public void eat() {
         System.out.println("Worlf Eating...");
     }
     @Override

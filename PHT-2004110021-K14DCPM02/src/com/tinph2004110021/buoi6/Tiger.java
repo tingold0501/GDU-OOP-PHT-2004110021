@@ -2,7 +2,7 @@ package com.tinph2004110021.buoi6;
 
 public class Tiger extends Canime {
     @Override
-    protected void eat() {
+    public void eat() {
         System.out.println("Tiger Eating...");
     }
     @Override

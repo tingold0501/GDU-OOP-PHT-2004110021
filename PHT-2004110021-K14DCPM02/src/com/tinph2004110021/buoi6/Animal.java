@@ -6,7 +6,7 @@ public abstract class Animal {
     protected void makeNoise(){
 
     }
-    protected void eat(){
+    public void eat(){
         System.out.println("Eating...");
     }
     protected void sleep(){
