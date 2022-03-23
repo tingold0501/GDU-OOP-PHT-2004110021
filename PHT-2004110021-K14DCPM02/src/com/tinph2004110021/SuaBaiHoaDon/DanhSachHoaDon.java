@@ -1,5 +1,7 @@
 package com.tinph2004110021.SuaBaiHoaDon;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -17,10 +19,17 @@ public class DanhSachHoaDon {
        System.out.println("Nhập Mã Phòng:");
        String maPhong = sc.nextLine();
        System.out.println("Nhập Ngày Hoá Đơn:");
-       
-    //    System.out.println("Nhập Tên Khách Hàng:");
-    //    String tenKhachHang = sc.nextLine();
-    //    HoaDon hoaDon2 = new HoaDon(maHoaDon,tenKhachHang,maPhong,donGia);
+       Date ngayHoaDon;
+       SimpleDateFormat sFormat = new SimpleDateFormat("dd/MM/yyyy");
+       try {
+         ngayHoaDon = sFormat.parse(sc.nextLine());
+      } catch (ParseException e) {
+         e.printStackTrace();
+      }
+      hoaDon.setDonGia(donGia);
+      hoaDon.setMaHoaDon(maHoaDon);
+      hoaDon.setMaPhong(maPhong);
+      // hoaDon.setNgayHoaDon(sFormat.format(ngayHoaDon));
    }
    protected void xuat(){
        
